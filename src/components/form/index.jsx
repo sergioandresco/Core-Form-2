@@ -67,7 +67,7 @@ function Form() {
             const archivo = e.target.files[0];
             setDocumentFile(archivo);
         }
-    };
+    };    
 
     const handleTicket = (e) => {
         setTicket(e.target.value);
@@ -83,20 +83,19 @@ function Form() {
             alert("Por favor, verifica que no eres un robot.");
             return;
         }
-
-        const data = {
-            name,
-            franchise,
-            digits: parseInt(digits, 10),
-            typeDocument,
-            documentNumber,
-            ticket,
-            otherPersons
-        };
-
-        const file = documentFile;
-
-        mutation.mutate(data, file);
+    
+        const data = new FormData();
+        data.append('name', name);
+        data.append('franchise', franchise);
+        data.append('digits', digits);
+        data.append('typeDocument', typeDocument);
+        data.append('documentNumber', documentNumber);
+        data.append('ticket', ticket);
+        data.append('otherPersons', otherPersons);
+        data.append('documentFile', documentFile);
+    
+        console.log(data);
+        mutation.mutate(data);
     }
 
     return (
@@ -160,7 +159,7 @@ function Form() {
 
                         <div className="form--container-questions">
                             <label className="container-questions--title">{t("form.document-file")}</label>
-                            <input required className="form--input" type="file" placeholder={t("form.write-answer")} value={documentFile} onChange={handleFile} />
+                            <input required className="form--input" type="file" placeholder={t("form.write-answer")} onChange={handleFile} />
                         </div>
 
                         <div className="form--container-questions">

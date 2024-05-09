@@ -1,12 +1,4 @@
-export const fetchData = async (data, file) => {
-   const formData = new FormData();
-
-   for (const key in data) {
-      formData.append(key, data[key]);
-   }
-
-   formData.append('documentFile', file);
-
+export const fetchData = async (formData) => {
    const response = await fetch(import.meta.env.VITE_ENDPOINT_FORM, {
       method: 'POST',
       body: formData,
@@ -18,4 +10,3 @@ export const fetchData = async (data, file) => {
 
    return response.json();
 };
-   
