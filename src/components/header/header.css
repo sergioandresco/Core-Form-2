@@ -75,7 +75,18 @@
 
 @media (min-width: 0px) and (max-width: 991.98px){
     .header--c{
-        margin-left: 31px;
+        margin-left: 5px;
         margin-right: 31px;
+        gap: 9px;
+    }
+
+    .link-img--img {
+        max-height: 36px;
+    }
+
+    .c--c-opt {
+        gap: 5px;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 }

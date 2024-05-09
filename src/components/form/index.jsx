@@ -196,7 +196,7 @@ function Form() {
                     </form>
 
                     <div className="social-account-container">
-                        <span className="social-account-container--title">Siguenos en:</span>
+                        <span className="social-account-container--title">{t("form.follow")}</span>
                         <div className="social-account-container--social-accounts">
 
                             <a href="https://www.instagram.com/tuboleta/?hl=es">

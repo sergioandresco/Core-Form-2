@@ -8,7 +8,7 @@ function Error({ onRetry }){
 
                 <div className="container-form-component--c-form">
 
-                    <div className="c-form--heading">El correo que asignaste no se encuentra registrado. Verifícalo e intenta de nuevo</div>
+                    <div className="c-form--heading">Ocurrio un error, vuelve a intentarlo</div>
 
                     <form className="form">
 
