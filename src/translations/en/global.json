@@ -8,7 +8,7 @@
         "tc-digits": "Enter ONLY the last 4 digits of the card you used for the purchase",
         "document-type": "Select the Cardholder document type (credit card owner)",
         "document-number": "Enter the cardholder Document Number",
-        "document-file": "Upload a document containing the image of the buyer ID document according to the previous questions (max file size 100 MB)",
+        "document-file": "Upload a document containing the image of the buyer ID document according to the previous questions (JPEG,JPG,PNG,PDF)",
         "tickets": "Indicate how many tickets you purchased in this transaction",
         "other-persons": "Enter the information of the individuals who will enter with those tickets. (Name / Nationality / Type of Document / ID Number)",
         "write-answer": "Write your answer",
@@ -23,6 +23,7 @@
         "three": "3 - Three",
         "four": "4 - Four",
         "five": "5 - Five",
-        "six": "6 - Six"
+        "six": "6 - Six",
+        "login": "Login"
     }
 }

@@ -52,11 +52,11 @@
     background-color: #ffa900;
     transition: all 0.3s ease-in-out;
     transform: width 0.3s ease-in-out;
-  }
+}
   
-  .c-opt--link:hover::after {
+.c-opt--link:hover::after {
     width: 100%;
-  }
+}
 
 .link--opt{
     font-family: "futura-pt", sans-serif;
@@ -64,6 +64,13 @@
     font-size: 13px;
     font-weight: 400;
     padding: 0 3px;
+}
+
+.c-opt--lenguages{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
 @media (min-width: 0px) and (max-width: 991.98px){

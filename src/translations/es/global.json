@@ -8,7 +8,7 @@
         "tc-digits": "Introduzca UNICAMENTE los 4 ultimos números de la tarjeta con la que realizo la compra",
         "document-type": "Tipo de documento del tarjeta habiente (propietario de la tarjeta)",
         "document-number": "Ingrese el número del documento del tarjeta habiente",
-        "document-file": "Cargue un documento con la imagen de la identificación personal descrita en las anteriores preguntas",
+        "document-file": "Cargue un documento con la imagen de la identificación personal descrita en las anteriores preguntas (JPEG,JPG,PNG,PDF)",
         "tickets": "Indique cuantas boletas compro en esa transacción",
         "other-persons": "Ingrese los datos de las personas que van a ingresar con esas boletas. (Nombre / Nacionalidad / Tipo de Documento / Número de ID)",
         "write-answer": "Escriba su respuesta",
@@ -23,6 +23,7 @@
         "three": "3 - Tres",
         "four": "4 - Cuatro",
         "five": "5 - Cinco",
-        "six": "6 - Seis"
+        "six": "6 - Seis",
+        "login": "Inicia sesión"
     }
 }

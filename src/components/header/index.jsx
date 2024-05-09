@@ -31,15 +31,11 @@ function Header(){
                     </a>
 
                     <a className='c-opt--link' href='https://www.tuboleta.com/images/Tuboleta_Pass/home.html'>
-                        <h2 className='link--opt'>Inicia sesión</h2>
+                        <h2 className='link--opt'>{t("form.login")}</h2>
                     </a>
 
-                    <a className='c-opt--link' href='https://www.tuboleta.com/images/Tuboleta_Pass/home.html'>
-                        <h2 className='link--opt'>Ingresar</h2>
-                    </a>
-
-                    <button onClick={() => i18n.changeLanguage("es")}>ES</button>
-                    <button onClick={() => i18n.changeLanguage("en")}>EN</button>
+                    <button className="c-opt--link c-opt--lenguages" onClick={() => i18n.changeLanguage("es")}>ES</button>
+                    <button className="c-opt--link c-opt--lenguages" onClick={() => i18n.changeLanguage("en")}>EN</button>
 
                 </div>
 
