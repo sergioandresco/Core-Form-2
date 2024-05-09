@@ -4,6 +4,9 @@ function Congrats() {
 
     const [t, i18n] = useTranslation("global");
 
+    let root = document.getElementById('root');
+    root.style.height = "100vh";
+
     return (
         <div className="container-form-component">
 

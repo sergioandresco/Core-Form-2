@@ -146,9 +146,9 @@ function Form() {
 
                             <select required className="form--input--select" placeholder="Selecciona la respuesta" value={typeDocument} onChange={handleTypeDocument} >
                                 <option value="" disabled selected>{t("form.select-option")}</option>
-                                <option value="Pasaporte">{t("form.passport")}</option>
-                                <option value="DNI - Nacional / ID">{t("form.dni")}</option>
-                                <option value="Licencia de Conducción">{t("form.driving-license")}</option>
+                                <option value="PA">{t("form.passport")}</option>
+                                <option value="DNIID">{t("form.dni")}</option>
+                                <option value="LC">{t("form.driving-license")}</option>
                             </select>
                         </div>
 
