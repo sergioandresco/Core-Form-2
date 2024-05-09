@@ -1,6 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 import './header.css';
 
 function Header(){
+
+    const [t, i18n] = useTranslation("global");
+
     return(
         <header className='header'>
 
@@ -32,6 +37,10 @@ function Header(){
                     <a className='c-opt--link' href='https://www.tuboleta.com/images/Tuboleta_Pass/home.html'>
                         <h2 className='link--opt'>Ingresar</h2>
                     </a>
+
+                    <button onClick={() => i18n.changeLanguage("es")}>ES</button>
+                    <button onClick={() => i18n.changeLanguage("en")}>EN</button>
+
                 </div>
 
             </div>

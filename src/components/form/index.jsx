@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useMutation } from 'react-query';
 import { fetchData } from "../../services/apiFormSubmit";
+import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import { Loader } from "../loader";
@@ -10,6 +11,8 @@ import { Error } from "../congrats/error";
 import './form.css';
 
 function Form() {
+
+    const [t, i18n] = useTranslation("global");
 
     const [name, setName] = useState('');
     const [franchise, setFranchise] = useState('');
@@ -107,77 +110,75 @@ function Form() {
                     <div className="c-form--container-titles">
                         <div className="c-form--heading">
                             <span>Core Medellin 2024</span>
-                            <span>Solicitud de confirmación de pago</span>
+                            <span>{t("form.subtitle")}</span>
                         </div>
-                        <div className="c-form--subtitle">Te agradecemos por participar en la edición 2024 de CORE en Medellín, Colombia. Una de nuestras prioridades en Tuboleta es garantizar que exista una seguridad en las transacciones. Como parte de eso te solicitamos por favor que nos confirmes la siguiente información con el fin de validar la transacción.</div>
+                        <div className="c-form--subtitle">{t("form.event-congratulations")}</div>
                     </div>
 
-                    <p className="c-form--label-conditions">
-                        La seguridad de su información es nuestra prioridad. Todos los datos recolectados a través de este formulario se manejan de manera confidencial y se almacenan de forma segura y tienen como única finalidad, realizar un proceso de validación de la transacción. Desde Tuboleta, el compromiso incluye no compartir, vender, transferir su información a terceros sin su consentimiento, a menos que sea requerido por ley. Para obtener más detalles sobre cómo protegemos su privacidad y seguridad, consulte nuestra <a className="c-form--label-conditions" href="https://www.tuboleta.com/images/CMS/POLITICADEPRIVACIAD.html" target="_blank"><strong>Política de Privacidad publicada en nuestra página web</strong></a>
-                    </p>
+                    <p className="c-form--label-conditions">{t("form.terms-conditions")}</p>
 
                     <form className="form" onSubmit={handleSubmit}>
 
                         <div className="form--container-questions">
-                            <label className="container-questions--title">Nombre completo del comprador</label>
-                            <input required className="form--input" type="text" placeholder="Escriba su respuesta" value={name} onChange={handleNameChange} />
+                            <label className="container-questions--title">{t("form.name-user")}</label>
+                            <input required className="form--input" type="text" placeholder={t("form.write-answer")} value={name} onChange={handleNameChange} />
                         </div>
 
                         <div className="form--container-questions">
-                            <label className="container-questions--title">Seleccione la franquicia de la tarjeta con la que realizo la compra de las boletas para CORE Medellín 2024</label>
+                            <label className="container-questions--title">{t("form.franchise")}</label>
                             <select required className="form--input--select" value={franchise} onChange={handleFranchise}>
-                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="" disabled selected>{t("form.select-option")}</option>
                                 <option value="Visa">VISA</option>
                                 <option value="Mastercard">MASTERCARD</option>
                                 <option value="American Express">AMERICAN EXPRESS</option>
                                 <option value="Diners">DINERS</option>
-                                <option value="Otras">Otras</option>
+                                <option value="Otras">{t("form.other")}</option>
                             </select>
                         </div>
 
                         <div className="form--container-questions">
-                            <label className="container-questions--title">Introduzca UNICAMENTE los 4 ultimos números de la tarjeta con la que realizo la compra</label>
-                            <input required maxLength='4' className="form--input" type="text" placeholder="Escriba su respuesta" value={digits} onChange={handleDigitsChange} />
+                            <label className="container-questions--title">{t("form.tc-digits")}</label>
+                            <input required maxLength='4' className="form--input" type="text" placeholder={t("form.write-answer")} value={digits} onChange={handleDigitsChange} />
                         </div>
 
                         <div className="form--container-questions">
 
-                            <label className="container-questions--title">Tipo de documento del tarjeta habiente (propietario de la tarjeta)</label>
+                            <label className="container-questions--title">{t("form.document-type")}</label>
 
                             <select required className="form--input--select" placeholder="Selecciona la respuesta" value={typeDocument} onChange={handleTypeDocument} >
-                                <option value="" disabled selected>Selecciona una opción</option>
-                                <option value="Pasaporte">Pasaporte</option>
-                                <option value="DNI - Nacional / ID">DNI - Nacional / ID</option>
-                                <option value="Licencia de Conducción">Licencia de Conducción</option>
+                                <option value="" disabled selected>{t("form.select-option")}</option>
+                                <option value="Pasaporte">{t("form.passport")}</option>
+                                <option value="DNI - Nacional / ID">{t("form.dni")}</option>
+                                <option value="Licencia de Conducción">{t("form.driving-license")}</option>
                             </select>
                         </div>
 
                         <div className="form--container-questions">
-                            <label className="container-questions--title">Ingrese el número del documento del tarjeta habiente</label>
-                            <input required className="form--input" type="text" placeholder="Escriba su respuesta" value={documentNumber} onChange={handleDocumentNumber} />
+                            <label className="container-questions--title">{t("form.document-number")}</label>
+                            <input required className="form--input" type="text" placeholder={t("form.write-answer")} value={documentNumber} onChange={handleDocumentNumber} />
                         </div>
 
                         <div className="form--container-questions">
-                            <label className="container-questions--title">Cargue un documento con la imagen de la identificación personal descrita en las anteriores preguntas</label>
-                            <input required className="form--input" type="file" placeholder="Escriba su respuesta" value={documentFile} onChange={handleFile} />
+                            <label className="container-questions--title">{t("form.document-file")}</label>
+                            <input required className="form--input" type="file" placeholder={t("form.write-answer")} value={documentFile} onChange={handleFile} />
                         </div>
 
                         <div className="form--container-questions">
-                            <label className="container-questions--title">Indique cuantas boletas compro en esa transacción</label>
+                            <label className="container-questions--title">{t("form.tickets")}</label>
                             <select required className="form--input--select" value={ticket} onChange={handleTicket}>
-                                <option value="" disabled selected>Selecciona una opción</option>
-                                <option value="1">1 - Una</option>
-                                <option value="2">2 - Dos</option>
-                                <option value="3">3 - Tres</option>
-                                <option value="4">4 - Cuatro</option>
-                                <option value="5">5 - Cinco</option>
-                                <option value="6">6 - Seis</option>
+                                <option value="" disabled selected>{t("form.select-option")}</option>
+                                <option value="1">{t("form.one")}</option>
+                                <option value="2">{t("form.two")}</option>
+                                <option value="3">{t("form.three")}</option>
+                                <option value="4">{t("form.four")}</option>
+                                <option value="5">{t("form.five")}</option>
+                                <option value="6">{t("form.six")}</option>
                             </select>
                         </div>
 
                         <div className="form--container-questions">
-                            <label className="container-questions--title">Ingrese los datos de las personas que van a ingresar con esas boletas. (Nombre / Nacionalidad / Tipo de Documento / Número de ID)</label>
-                            <input required className="form--input" type="text" placeholder="Escriba su respuesta" value={otherPersons} onChange={handleOtherPersons} />
+                            <label className="container-questions--title">{t("form.other-persons")}</label>
+                            <input required className="form--input" type="text" placeholder={t("form.write-answer")} value={otherPersons} onChange={handleOtherPersons} />
                         </div>
                         
                         <ReCAPTCHA
@@ -189,7 +190,7 @@ function Form() {
                         {mutation.isLoading ? (
                                 <Loader />
                             ) : (
-                                <button className="form--submit-button" type="submit" disabled={mutation.isLoading}>Enviar</button>
+                                <button className="form--submit-button" type="submit" disabled={mutation.isLoading}>{t("form.send")}</button>
                         )}
         
                     </form>

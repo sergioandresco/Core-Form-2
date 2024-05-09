@@ -1,0 +1,28 @@
+{
+    "form": {
+        "subtitle": "Payment Confirmation Survey",
+        "event-congratulations": "We thank you for participating in the 2024 edition of CORE in Medellín, Colombia. One of our priorities at Tuboleta is to guarantee that there is security in transactions. As part of that, we ask that you please confirm the following information in order to validate the transaction.",
+        "terms-conditions": "The security of your information is our priority. All data collected through this form is handled confidentially and stored securely and has the sole purpose of carrying out a transaction validation process. From Tuboleta, the commitment includes not sharing, selling, transferring your information to third parties without your consent, unless required by law. For more details on how we protect your privacy and security, please see our Privacy Policy published on our website: https://www.tuboleta.com/images/CMS/POLITICADEPRIVACIAD.html",
+        "name-user": "Full name of the ticket purchaser",
+        "franchise": "Select the franchise of the card with which you made the purchase of the tickets for the CORE Medellín 2024 event",
+        "tc-digits": "Enter ONLY the last 4 digits of the card you used for the purchase",
+        "document-type": "Select the Cardholder document type (credit card owner)",
+        "document-number": "Enter the cardholder Document Number",
+        "document-file": "Upload a document containing the image of the buyer ID document according to the previous questions (max file size 100 MB)",
+        "tickets": "Indicate how many tickets you purchased in this transaction",
+        "other-persons": "Enter the information of the individuals who will enter with those tickets. (Name / Nationality / Type of Document / ID Number)",
+        "write-answer": "Write your answer",
+        "select-option": "Select an option",
+        "send": "Send",
+        "other": "Other",
+        "passport": "Passport",
+        "dni": "DNI - National / ID",
+        "driving-license": "Driving license",
+        "one": "1 - One",
+        "two": "2 - Two",
+        "three": "3 - Three",
+        "four": "4 - Four",
+        "five": "5 - Five",
+        "six": "6 - Six"
+    }
+}

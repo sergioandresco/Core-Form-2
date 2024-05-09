@@ -1,0 +1,28 @@
+{
+    "form": {
+        "subtitle": "Solicitud de confirmación de pago",
+        "event-congratulations": "Te agradecemos por participar en la edición 2024 de CORE en Medellín, Colombia. Una de nuestras prioridades en Tuboleta es garantizar que exista una seguridad en las transacciones. Como parte de eso te solicitamos por favor que nos confirmes la siguiente información con el fin de validar la transacción.",
+        "terms-conditions": "La seguridad de su información es nuestra prioridad. Todos los datos recolectados a través de este formulario se manejan de manera confidencial y se almacenan de forma segura y tienen como única finalidad, realizar un proceso de validación de la transacción. Desde Tuboleta, el compromiso incluye no compartir, vender, transferir su información a terceros sin su consentimiento, a menos que sea requerido por ley. Para obtener más detalles sobre cómo protegemos su privacidad y seguridad, consulte nuestra Política de Privacidad publicada en nuestra página web: https://www.tuboleta.com/images/CMS/POLITICADEPRIVACIAD.html",
+        "name-user": "Nombre completo del comprador",
+        "franchise": "Seleccione la franquicia de la tarjeta con la que realizo la compra de las boletas para CORE Medellín 2024",
+        "tc-digits": "Introduzca UNICAMENTE los 4 ultimos números de la tarjeta con la que realizo la compra",
+        "document-type": "Tipo de documento del tarjeta habiente (propietario de la tarjeta)",
+        "document-number": "Ingrese el número del documento del tarjeta habiente",
+        "document-file": "Cargue un documento con la imagen de la identificación personal descrita en las anteriores preguntas",
+        "tickets": "Indique cuantas boletas compro en esa transacción",
+        "other-persons": "Ingrese los datos de las personas que van a ingresar con esas boletas. (Nombre / Nacionalidad / Tipo de Documento / Número de ID)",
+        "write-answer": "Escriba su respuesta",
+        "select-option": "Selecciona una opción",
+        "send": "Enviar",
+        "other": "Otras",
+        "passport": "Pasaporte",
+        "dni": "DNI - Nacional / ID",
+        "driving-license": "Licencia de Conducción",
+        "one": "1 - Una",
+        "two": "2 - Dos",
+        "three": "3 - Tres",
+        "four": "4 - Cuatro",
+        "five": "5 - Cinco",
+        "six": "6 - Seis"
+    }
+}
