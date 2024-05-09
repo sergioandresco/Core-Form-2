@@ -9,16 +9,17 @@ import './form.css';
 
 function Form() {
 
-    const [Nombre, setNombre] = useState('');
-    const [Empresa, setEmpresa] = useState('');
-    const [NumTelefonico, setNumTelefonico] = useState('');
-    const [Correo, setCorreo] = useState('');
+    const [name, setName] = useState('');
+    const [franchise, setFranchise] = useState('');
+    const [digits, setDigits] = useState('');
+    const [typeDocument, setTypeDocument] = useState('');
+    const [documentNumber, setDocumentNumber] = useState('');
+    const [file, setFile] = useState(null);
+    const [ticket, setTicket] = useState('');
+    const [otherPersons, setOtherPersons] = useState('');
     const [captchaValue, setCaptchaValue] = useState(null);
 
     const mutation = useMutation(fetchData, {
-        onSuccess: (data) => {
-            localStorage.setItem('sessionID', data.SessionId);
-        },
         onError: (error) => {
             console.error(error);
         },
@@ -28,24 +29,41 @@ function Form() {
         setCaptchaValue(value);
     };
     
-    const handleNombreChange = (e) => {
+    const handleNameChange = (e) => {
         const nombreSinEspeciales = e.target.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]/g, '');
-        setNombre(nombreSinEspeciales);
+        setName(nombreSinEspeciales);
+    }
+    
+    const handleFranchise = (e) => {
+        setFranchise(e.target.value);
+    };
+    
+    const handleDigitsChange = (e) => {
+        const numerosSinE = e.target.value.replace(/\D/g, '');
+        setDigits(numerosSinE);
     }
 
-    const handleEmpresaChange = (e) => {
-        setEmpresa(e.target.value);
+    const handleTypeDocument = (e) => {
+        setTypeDocument(e.target.value);
+    };
+    
+    const handleDocumentNumber = (e) => {
+        setDocumentNumber(e.target.value);
     }
 
-    const handleCorreoChange = (e) => {
-        const correoSinEspeciales = e.target.value.replace(/[^a-zA-Z0-9@._-]/g, '');
-        setCorreo(correoSinEspeciales);
+    const handleFile = (e) => {
+        if (e.target.files.length > 0) {
+            const archivo = e.target.files[0];
+            setFile(archivo);
+        }
     };
 
+    const handleTicket = (e) => {
+        setTicket(e.target.value);
+    }
 
-    const handleNumberChange = (e) => {
-        const numerosSinE = e.target.value.replace(/\D/g, '');
-        setNumTelefonico(numerosSinE);
+    const handleOtherPersons = (e) => {
+        setOtherPersons(e.target.value);
     }
 
     const handleSubmit = (e) => {
@@ -56,10 +74,14 @@ function Form() {
         }
 
         const data = {
-            Nombre,
-            Empresa,
-            NumTelefonico: parseInt(NumTelefonico, 10),
-            Correo,
+            name,
+            franchise,
+            digits: parseInt(digits, 10),
+            typeDocument,
+            documentNumber,
+            file,
+            ticket,
+            otherPersons
         };
         mutation.mutate(data);
     }
@@ -86,42 +108,64 @@ function Form() {
 
                     <div className="form--container-questions">
                         <label className="container-questions--title">Nombre completo del comprador</label>
-                        <input required className="form--input" type="text" placeholder="Escriba su respuesta" value={Nombre} onChange={handleNombreChange} />
+                        <input required className="form--input" type="text" placeholder="Escriba su respuesta" value={name} onChange={handleNameChange} />
                     </div>
 
                     <div className="form--container-questions">
                         <label className="container-questions--title">Seleccione la franquicia de la tarjeta con la que realizo la compra de las boletas para CORE Medellín 2024</label>
-                        <input required className="form--input" type="text" placeholder="Escriba su respuesta" value={Empresa} onChange={handleEmpresaChange} />
+                        <select required className="form--input--select" value={franchise} onChange={handleFranchise}>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Visa">VISA</option>
+                            <option value="Mastercard">MASTERCARD</option>
+                            <option value="American Express">AMERICAN EXPRESS</option>
+                            <option value="Diners">DINERS</option>
+                            <option value="Otras">Otras</option>
+                        </select>
                     </div>
 
                     <div className="form--container-questions">
                         <label className="container-questions--title">Introduzca UNICAMENTE los 4 ultimos números de la tarjeta con la que realizo la compra</label>
-                        <input required className="form--input" type="text" placeholder="Escriba su respuesta" value={NumTelefonico} onChange={handleNumberChange} />
+                        <input required className="form--input" type="text" placeholder="Escriba su respuesta" value={digits} onChange={handleDigitsChange} />
                     </div>
 
                     <div className="form--container-questions">
+
                         <label className="container-questions--title">Tipo de documento del tarjeta habiente (propietario de la tarjeta)</label>
-                        <input required className="form--input" type="email" placeholder="Escriba su respuesta" value={Correo} onChange={handleCorreoChange} />
+
+                        <select required className="form--input--select" placeholder="Selecciona la respuesta" value={typeDocument} onChange={handleTypeDocument} >
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                            <option value="DNI - Nacional / ID">DNI - Nacional / ID</option>
+                            <option value="Licencia de Conducción">Licencia de Conducción</option>
+                        </select>
                     </div>
 
                     <div className="form--container-questions">
                         <label className="container-questions--title">Ingrese el número del documento del tarjeta habiente</label>
-                        <input required className="form--input" type="email" placeholder="Escriba su respuesta" value={Correo} onChange={handleCorreoChange} />
+                        <input required className="form--input" type="text" placeholder="Escriba su respuesta" value={documentNumber} onChange={handleDocumentNumber} />
                     </div>
 
                     <div className="form--container-questions">
                         <label className="container-questions--title">Cargue un documento con la imagen de la identificación personal descrita en las anteriores preguntas</label>
-                        <input required className="form--input" type="email" placeholder="Escriba su respuesta" value={Correo} onChange={handleCorreoChange} />
+                        <input required className="form--input" type="file" placeholder="Escriba su respuesta" value={file} onChange={handleFile} />
                     </div>
 
                     <div className="form--container-questions">
                         <label className="container-questions--title">Indique cuantas boletas compro en esa transacción</label>
-                        <input required className="form--input" type="email" placeholder="Escriba su respuesta" value={Correo} onChange={handleCorreoChange} />
+                        <select required className="form--input--select" value={ticket} onChange={handleTicket}>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="1">1 - Una</option>
+                            <option value="2">2 - Dos</option>
+                            <option value="3">3 - Tres</option>
+                            <option value="4">4 - Cuatro</option>
+                            <option value="5">5 - Cinco</option>
+                            <option value="6">6 - Seis</option>
+                        </select>
                     </div>
 
                     <div className="form--container-questions">
                         <label className="container-questions--title">Ingrese los datos de las personas que van a ingresar con esas boletas. (Nombre / Nacionalidad / Tipo de Documento / Número de ID)</label>
-                        <input required className="form--input" type="email" placeholder="Escriba su respuesta" value={Correo} onChange={handleCorreoChange} />
+                        <input required className="form--input" type="text" placeholder="Escriba su respuesta" value={otherPersons} onChange={handleOtherPersons} />
                     </div>
                     
                     <ReCAPTCHA
