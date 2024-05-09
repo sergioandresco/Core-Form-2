@@ -1,20 +1,24 @@
+import { useTranslation } from "react-i18next";
+
 function Congrats() {
+
+    const [t, i18n] = useTranslation("global");
 
     return (
         <div className="container-form-component">
 
             <div className="container-form-component--c-form">
 
-                <div className="c-form--heading">Tu solicitud se registró correctamente</div>
+                <div className="c-form--heading">{t("form.successful")}</div>
 
                 <form className="form">
 
-                    <a className="form--submit-button" href="https://www.tuboleta.com/" style={{ textAlign: 'center', textDecoration: 'none', fontFamily: 'futura-pt, sans-serif' }}>Aceptar</a>
+                    <a className="form--submit-button" href="https://www.tuboleta.com/" style={{ textAlign: 'center', textDecoration: 'none', fontFamily: 'futura-pt, sans-serif' }}>{t("form.accept")}</a>
 
                 </form>
 
                 <div className="social-account-container">
-                    <span className="social-account-container--title">Siguenos en:</span>
+                    <span className="social-account-container--title">{t("form.follow")}</span>
                     <div className="social-account-container--social-accounts">
 
                         <a href="https://www.instagram.com/tuboleta/?hl=es">

@@ -25,6 +25,9 @@
         "five": "5 - Five",
         "six": "6 - Six",
         "login": "Login",
-        "follow": "Follow us on:"
+        "follow": "Follow us on:",
+        "successful": "Your request was successfully registered",
+        "accept": "An error occurred, try again",
+        "return": "Return"
     }
 }

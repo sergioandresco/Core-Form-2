@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
+import { useTranslation } from "react-i18next";
 
 function Error({ onRetry }){
+
+    const [t, i18n] = useTranslation("global");
+
     return(
         <>
 
@@ -8,16 +12,16 @@ function Error({ onRetry }){
 
                 <div className="container-form-component--c-form">
 
-                    <div className="c-form--heading">Ocurrio un error, vuelve a intentarlo</div>
+                    <div className="c-form--heading">{t("form.error")}</div>
 
                     <form className="form">
 
-                        <button className="form--submit-button" onClick={onRetry}>Regresar</button>
+                        <button className="form--submit-button" onClick={onRetry}>{t("form.return")}</button>
 
                     </form>
 
                     <div className="social-account-container">
-                        <span className="social-account-container--title">Siguenos en:</span>
+                        <span className="social-account-container--title">{t("form.follow")}</span>
                         <div className="social-account-container--social-accounts">
 
                             <a href="https://www.instagram.com/tuboleta/?hl=es">

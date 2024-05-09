@@ -25,6 +25,10 @@
         "five": "5 - Cinco",
         "six": "6 - Seis",
         "login": "Inicia sesión",
-        "follow": "Siguenos en:"
+        "follow": "Siguenos en:",
+        "successful": "Tu solicitud se registró correctamente",
+        "accept": "Aceptar",
+        "error": "Ocurrio un error, vuelve a intentarlo",
+        "return": "Regresar"
     }
 }
