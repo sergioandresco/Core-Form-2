@@ -108,13 +108,13 @@ function Form() {
 
                     <div className="c-form--container-titles">
                         <div className="c-form--heading">
-                            <span>Core Medellin 2024</span>
+                            <span>Core Medellín 2024</span>
                             <span>{t("form.subtitle")}</span>
                         </div>
                         <div className="c-form--subtitle">{t("form.event-congratulations")}</div>
                     </div>
 
-                    <p className="c-form--label-conditions">{t("form.terms-conditions")}</p>
+                    <p className="c-form--label-conditions">{t("form.terms-conditions")}<a href="https://www.tuboleta.com/images/CMS/POLITICADEPRIVACIAD.html"><strong> {t("form.here")}</strong></a></p>
 
                     <form className="form" onSubmit={handleSubmit}>
 

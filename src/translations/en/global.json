@@ -2,15 +2,15 @@
     "form": {
         "subtitle": "Payment Confirmation Survey",
         "event-congratulations": "We thank you for participating in the 2024 edition of CORE in Medellín, Colombia. One of our priorities at Tuboleta is to guarantee that there is security in transactions. As part of that, we ask that you please confirm the following information in order to validate the transaction.",
-        "terms-conditions": "The security of your information is our priority. All data collected through this form is handled confidentially and stored securely and has the sole purpose of carrying out a transaction validation process. From Tuboleta, the commitment includes not sharing, selling, transferring your information to third parties without your consent, unless required by law. For more details on how we protect your privacy and security, please see our Privacy Policy published on our website: https://www.tuboleta.com/images/CMS/POLITICADEPRIVACIAD.html",
-        "name-user": "Full name of the ticket purchaser",
-        "franchise": "Select the franchise of the card with which you made the purchase of the tickets for the CORE Medellín 2024 event",
-        "tc-digits": "Enter ONLY the last 4 digits of the card you used for the purchase",
-        "document-type": "Select the Cardholder document type (credit card owner)",
-        "document-number": "Enter the cardholder Document Number",
-        "document-file": "Upload a document containing the image of the buyer ID document according to the previous questions (JPEG,JPG,PNG,PDF)",
-        "tickets": "Indicate how many tickets you purchased in this transaction",
-        "other-persons": "Enter the information of the individuals who will enter with those tickets. (Name / Nationality / Type of Document / ID Number)",
+        "terms-conditions": "The security of your information is our priority. All data collected through this form is handled confidentially and stored securely and has the sole purpose of carrying out a transaction validation process. From Tuboleta, the commitment includes not sharing, selling, transferring your information to third parties without your consent, unless required by law. For more details on how we protect your privacy and security, please see our Privacy Policy",
+        "name-user": "1. Full name of the ticket purchaser",
+        "franchise": "2. Select the franchise of the card with which you made the purchase of the tickets for the CORE Medellín 2024 event",
+        "tc-digits": "3. Enter ONLY the last 4 digits of the card you used for the purchase",
+        "document-type": "4. Select the Cardholder document type (credit card owner)",
+        "document-number": "5. Enter the cardholder Document Number",
+        "document-file": "6. Upload a document containing the image of the buyer ID document according to the previous questions (JPEG,JPG,PNG,PDF)",
+        "tickets": "7. Indicate how many tickets you purchased in this transaction",
+        "other-persons": "8. Enter the information of the individuals who will enter with those tickets. (Name / Nationality / Type of Document / ID Number)",
         "write-answer": "Write your answer",
         "select-option": "Select an option",
         "send": "Send",
@@ -28,6 +28,7 @@
         "follow": "Follow us on:",
         "successful": "Your request was successfully registered",
         "accept": "An error occurred, try again",
-        "return": "Return"
+        "return": "Return",
+        "here": "here."
     }
 }
