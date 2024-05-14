@@ -13,7 +13,7 @@ function DataList() {
     if (isLoading) return <Loader />;
     if (error) return <div>Error: {error.message}</div>;
 
-    if (data && Array.isArray(data.data)) {
+    if (data && Array.isArray(data.Data)) {
         return (
             <div className="container-list-component">
                 <div className="container-list-component--c-list">
@@ -33,7 +33,7 @@ function DataList() {
                             </tr>
                         </thead>
                         <tbody>
-                            {data.data.map((item) => (
+                            {data.Data.map((item) => (
                                 <tr key={item.name}>
                                     <td>{item.name}</td>
                                     <td>{item.franchise}</td>
