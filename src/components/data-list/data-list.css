@@ -42,10 +42,11 @@
 .c-list--table th{
     background-color: #e7bd00;
     font-weight: bold;
+    font-size: 12px;
 }
 
 .c-list--table td{
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .c-list--table td:hover img {

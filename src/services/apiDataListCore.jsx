@@ -1,5 +1,5 @@
 export const GetData = async (formData) => {
-    const url = new URL(import.meta.env.VITE_ENDPOINT_LIST_CORE_DEV);
+    const url = new URL(import.meta.env.VITE_ENDPOINT_LIST_CORE);
     Object.keys(formData).forEach(key => url.searchParams.append(key, formData[key]));
 
     const response = await fetch(url, {
