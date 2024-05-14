@@ -14,5 +14,17 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script type="module">
+      // Función para redirigir todas las solicitudes a index.html
+      async function redirectAllRequestsToIndexHtml() {
+        try {
+          await fetch('/index.html');
+        } catch (error) {
+          console.error('Error al redirigir todas las solicitudes:', error);
+        }
+      }
+      redirectAllRequestsToIndexHtml();
+    </script>
+    
   </body>
 </html>
