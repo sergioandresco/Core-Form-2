@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { useMutation } from 'react-query';
-import { fetchData } from "../../services/apiFormSubmit";
+import { fetchData } from "../../../services/apiFormSubmit";
 import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import { Loader } from "../loader";
-import { Congrats } from "../congrats";
-import { Error } from "../congrats/error";
+import { Loader } from "../../loader";
+import { Congrats } from "../../congrats";
+import { Error } from "../../congrats/error";
 
-import './form.css';
+import '../form.css';
 
 function Form() {
+
+    console.log("aqui");
 
     const [t, i18n] = useTranslation("global");
 
