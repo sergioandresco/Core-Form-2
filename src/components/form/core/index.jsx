@@ -12,6 +12,8 @@ import '../form.css';
 
 function Form() {
 
+    console.log("aqui");
+
     const [t, i18n] = useTranslation("global");
 
     const [name, setName] = useState('');
