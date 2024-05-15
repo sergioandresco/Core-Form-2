@@ -11,11 +11,8 @@ import './index.css'
 
 import global_es from "./translations/es/global.json";
 import global_en from "./translations/en/global.json";
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 const queryClient = new QueryClient();
-
-const router = createBrowserRouter([{path: "/", element: <div>Hola Mundo</div>}])
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -35,7 +32,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <I18nextProvider i18n={i18next}>
       <QueryClientProvider client={queryClient}>
         <Header />
-        <RouterProvider router={router} />
+        <App />
       </QueryClientProvider>
     </I18nextProvider>
   </React.StrictMode>,
